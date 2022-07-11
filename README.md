@@ -1,1 +1,2 @@
 # Rock-Paper-Scissors-OdinProject
+This would be my first JavaScript program built from scratch. This game is played completely from the console. This rock, paper, scissor game is going to play against the computer.
