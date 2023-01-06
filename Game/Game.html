@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Rock, Paper, Scissors!!!</title>
+        <script src="../myscrits.js" defer></script>
+        <link rel="stylesheet" href="../style.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+
+    </head>
+    <body>
+        <div class = "popup">
+            <div class="EvilContainer">
+                <img src="../imgs/evil-computer-laptop.png">
+            </div>
+            <div class="margintop">I TRICKED YOU! I'M EVIL! IF I WIN YOU GET A VIRUS, IF YOU WIN YOU GET BRAGGING RIGHT!
+            </div>
+
+            <button id="close">&times;</button>
+        </div>
+        <div class = "wrapper">
+            <div id="background">
+
+
+                <div class="Flex-Container4">
+
+                    <div class="Info-Container2">
+                        <div class="EditText">Evil Computer-Overlord, Rocky:</div>
+                        <div class="EditResults" id="comp-results"></div> 
+                    </div>
+
+                </div>
+
+                <div class ="Flex-Container3">
+                    <div class ="Placeholder3"><img src="" id="loadingEnemy"/></div>
+                    
+                </div>
+
+                <div class ="Flex-Container2">
+                    <div class ="Placeholder2"><img src="" id="loadingImage"/></div>
+                </div>
+
+                <div class = Flex-Container>
+                    <div class="HomeContainer">
+                        <button class="text-btn"><a href="../index.html">&#127968;</a></button>
+                    </div>
+                    <div class="Info-Container">
+                        <div class="EditText">How will you defend yourself?</div>
+                        <div class="BtnContainer">
+                            <!-- The functions being called assign a value to the player -->
+                            <button class = "CenterBtn" id="rbtn" onclick="assignRock()">Rock</button>
+                            <button class = "CenterBtn"  id = "pbtn" onclick="assignPaper()">Paper</button>
+                            <button class = "CenterBtn"  id = 'sbtn' onclick="assignScissors()">Scissors</button> 
+                        </div>
+                        <div class="EditResults" id="results"></div>  
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+</html>
+
