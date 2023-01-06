@@ -51,6 +51,7 @@ function playRound (playerSelection, computerSelection) {
     }
 }
 function displayResults() {
+//Decides the winner, whoever reaches 5 wins first; 
     if (PW==5) { 
         document.getElementById("results").textContent = "CONGRATS! You got "+PW+" wins before the computer. You have been granted official braggin rights for beating a computer in ROCK,PAPER,SCISSORS!!";
         document.getElementById("comp-results").textContent = "A WORTHY ADVERSARY...";
@@ -65,9 +66,8 @@ function displayResults() {
         document.getElementById("sbtn").disabled = true;
     }
 }
-
+//Initiates the game
  function game () {
-    
         playRound (playerSelection, computerSelection);
         displayResults();
 }
@@ -78,6 +78,8 @@ const sbtn = document.querySelector('#sbtn');
 
 function computerPlay () {
     const Hand = ["rock", "paper", "scissors"];
+    //Assings a random choice to the computer, then assigns the according image
+    //to the element that will present it.
     let choise =  Hand[Math.floor(Math.random() * Hand.length)]
     if (choise == "rock") {
         document.getElementById("loadingEnemy").src = "../imgs/rock.jpg";
@@ -89,6 +91,8 @@ function computerPlay () {
     return choise;
 }
 
+//the following three functions are called when the player clicks on the 
+//rock, paper, or scissors button to assing a value to playerSelection.
 function assignRock () {
     playerSelection = "rock";
     computerSelection = computerPlay();
@@ -105,12 +109,14 @@ function assignScissors() {
     
 }
 
+//the following three functions are called when the player clicks on the 
+//rock, paper, or scissors button to initiate the game flow logic.
     rbtn.addEventListener('click', game);
-
     pbtn.addEventListener('click', game);
-
     sbtn.addEventListener('click', game);
 
+
+//Displays the pop-up message by Rocky as soon as the pages loads. 
     window.addEventListener("load", function(){
         setTimeout(
             function open(event){
